@@ -1,5 +1,58 @@
-import './globals.css';import {SITE_URL,doctor,publications} from '@/lib/site';
-export const metadata={metadataBase:new URL(SITE_URL),title:{default:'Dra. Claudia Stein Gomes | Cirurgiã Vascular em Curitiba',template:'%s | Dra. Claudia Stein Gomes'},description:'Cirurgia vascular em Curitiba com foco em varizes, endolaser, escleroterapia, laser transdérmico e tratamento integrado do linfedema. CRM-PR 16064 · RQE 9991.',applicationName:'Dra. Claudia Stein Gomes — Cirurgia Vascular',authors:[{name:'Dra. Claudia Stein Gomes'}],creator:'Dra. Claudia Stein Gomes',publisher:'Dra. Claudia Stein Gomes',category:'Saúde',keywords:['cirurgiã vascular Curitiba','cirurgia vascular Curitiba','varizes Curitiba','endolaser Curitiba','tratamento de varizes','escleroterapia Curitiba','laser transdérmico Curitiba','linfedema Curitiba','flebologia Curitiba','linfologia Curitiba'],alternates:{canonical:'/',languages:{'pt-BR':'/'}},openGraph:{type:'website',locale:'pt_BR',url:SITE_URL,siteName:'Dra. Claudia Stein Gomes — Cirurgia Vascular',title:'Dra. Claudia Stein Gomes | Cirurgiã Vascular em Curitiba',description:'Varizes, Endolaser, escleroterapia, laser transdérmico e tratamento integrado do linfedema em Curitiba.'},twitter:{card:'summary_large_image',title:'Dra. Claudia Stein Gomes | Cirurgia Vascular em Curitiba',description:'Cuidado vascular especializado em Curitiba.'},robots:{index:true,follow:true,googleBot:{index:true,follow:true,'max-image-preview':'large','max-snippet':-1,'max-video-preview':-1}}};
-const physicianId=`${SITE_URL}/sobre#physician`,clinicId=`${SITE_URL}/#clinic`,websiteId=`${SITE_URL}/#website`;
-const schema={'@context':'https://schema.org','@graph':[{'@type':['Person','Physician'],'@id':physicianId,name:doctor.name,url:`${SITE_URL}/sobre`,jobTitle:'Cirurgiã Vascular',description:'Cirurgiã vascular com atuação em flebologia, tratamento de varizes e linfologia em Curitiba.',telephone:'+5541991041543',email:doctor.email,identifier:[{'@type':'PropertyValue',name:'CRM-PR',value:'16064'},{'@type':'PropertyValue',name:'RQE',value:'9991'}],knowsAbout:['Cirurgia Vascular','Flebologia','Varizes','Endolaser','Escleroterapia','Laser Transdérmico','Linfologia','Linfedema','Trombose'],memberOf:[{'@type':'Organization',name:'Academia Paranaense de Medicina'},{'@type':'Organization',name:'Sociedade Brasileira de Angiologia e de Cirurgia Vascular'}],workLocation:{'@id':clinicId},sameAs:[doctor.doctoralia,doctor.instagram,doctor.youtube,doctor.facebook,doctor.tiktok]},{'@type':['MedicalClinic','LocalBusiness'],'@id':clinicId,name:'Gênese Clínica',url:SITE_URL,telephone:'+554132249470',address:{'@type':'PostalAddress',streetAddress:'Rua Visconde de Nacar, 656 — Mercês',addressLocality:'Curitiba',addressRegion:'PR',postalCode:'80410-200',addressCountry:'BR'},areaServed:{'@type':'City',name:'Curitiba'},employee:{'@id':physicianId}},{'@type':'WebSite','@id':websiteId,url:SITE_URL,name:'Dra. Claudia Stein Gomes — Cirurgia Vascular',inLanguage:'pt-BR',publisher:{'@id':physicianId}},{'@type':'WebPage','@id':`${SITE_URL}/#webpage`,url:SITE_URL,name:'Dra. Claudia Stein Gomes | Cirurgiã Vascular em Curitiba',isPartOf:{'@id':websiteId},about:{'@id':physicianId},inLanguage:'pt-BR'},...publications.map((p,i)=>({'@type':'ScholarlyArticle','@id':`${SITE_URL}/publicacoes#pub-${i+1}`,headline:p.title,datePublished:p.year,author:{'@id':physicianId},isPartOf:{'@type':'Periodical',name:p.journal},inLanguage:i===1||i===2?'en':'pt-BR'}))]};
-export default function RootLayout({children}){return <html lang="pt-BR"><body><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/>{children}</body></html>}
+import './globals.css';
+import './photo-enhancements.css';
+import { SITE_URL, clinicPhotos, doctor, publications } from '@/lib/site';
+
+export const metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: { default: 'Dra. Claudia Stein Gomes | Cirurgiã Vascular em Curitiba', template: '%s | Dra. Claudia Stein Gomes' },
+  description: 'Cirurgia vascular em Curitiba com foco em varizes, endolaser, escleroterapia, laser transdérmico e tratamento integrado do linfedema. CRM-PR 16064 · RQE 9991.',
+  applicationName: 'Dra. Claudia Stein Gomes — Cirurgia Vascular',
+  authors: [{ name: 'Dra. Claudia Stein Gomes' }],
+  creator: 'Dra. Claudia Stein Gomes',
+  publisher: 'Dra. Claudia Stein Gomes',
+  category: 'Saúde',
+  keywords: ['cirurgiã vascular Curitiba','cirurgia vascular Curitiba','varizes Curitiba','endolaser Curitiba','tratamento de varizes','escleroterapia Curitiba','laser transdérmico Curitiba','linfedema Curitiba','flebologia Curitiba','linfologia Curitiba'],
+  alternates: { canonical: '/', languages: { 'pt-BR': '/' } },
+  openGraph: {
+    type: 'website', locale: 'pt_BR', url: SITE_URL, siteName: 'Dra. Claudia Stein Gomes — Cirurgia Vascular',
+    title: 'Dra. Claudia Stein Gomes | Cirurgiã Vascular em Curitiba',
+    description: 'Varizes, Endolaser, escleroterapia, laser transdérmico e tratamento integrado do linfedema em Curitiba.',
+    images: [{ url: doctor.photo, width: 512, height: 512, alt: 'Dra. Claudia Stein Gomes' }]
+  },
+  twitter: { card: 'summary_large_image', title: 'Dra. Claudia Stein Gomes | Cirurgia Vascular em Curitiba', description: 'Cuidado vascular especializado em Curitiba.', images: [doctor.photo] },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } }
+};
+
+const physicianId = `${SITE_URL}/sobre#physician`;
+const clinicId = `${SITE_URL}/#clinic`;
+const websiteId = `${SITE_URL}/#website`;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': ['Person','Physician'], '@id': physicianId, name: doctor.name, url: `${SITE_URL}/sobre`,
+      image: doctor.photo, jobTitle: 'Cirurgiã Vascular', description: 'Cirurgiã vascular com atuação em flebologia, tratamento de varizes e linfologia em Curitiba.',
+      telephone: '+5541991041543', email: doctor.email, medicalSpecialty: 'https://schema.org/Cardiovascular',
+      identifier: [{ '@type': 'PropertyValue', name: 'CRM-PR', value: '16064' }, { '@type': 'PropertyValue', name: 'RQE', value: '9991' }],
+      knowsAbout: ['Cirurgia Vascular','Flebologia','Varizes','Endolaser','Escleroterapia','Laser Transdérmico','Linfologia','Linfedema','Trombose'],
+      memberOf: [{ '@type': 'Organization', name: 'Academia Paranaense de Medicina' }, { '@type': 'Organization', name: 'Sociedade Brasileira de Angiologia e de Cirurgia Vascular' }],
+      workLocation: { '@id': clinicId },
+      sameAs: [doctor.doctoralia, doctor.googleProfile, doctor.instagram, doctor.youtube, doctor.facebook, doctor.tiktok]
+    },
+    {
+      '@type': ['MedicalClinic','LocalBusiness'], '@id': clinicId, name: 'Gênese Clínica', url: `${SITE_URL}/contato`,
+      image: [clinicPhotos.exterior, clinicPhotos.reception], telephone: '+554132249470',
+      address: { '@type': 'PostalAddress', streetAddress: 'Rua Visconde de Nacar, 656 — Mercês', addressLocality: 'Curitiba', addressRegion: 'PR', postalCode: '80410-200', addressCountry: 'BR' },
+      areaServed: { '@type': 'City', name: 'Curitiba' }, medicalSpecialty: 'https://schema.org/Cardiovascular', employee: { '@id': physicianId },
+      sameAs: ['https://geneseclinica.com.br/','https://www.doctoralia.com.br/clinicas/genese-clinica',doctor.maps]
+    },
+    { '@type': 'WebSite', '@id': websiteId, url: SITE_URL, name: 'Dra. Claudia Stein Gomes — Cirurgia Vascular', inLanguage: 'pt-BR', publisher: { '@id': physicianId } },
+    { '@type': 'WebPage', '@id': `${SITE_URL}/#webpage`, url: SITE_URL, name: 'Dra. Claudia Stein Gomes | Cirurgiã Vascular em Curitiba', isPartOf: { '@id': websiteId }, about: { '@id': physicianId }, inLanguage: 'pt-BR' },
+    ...publications.map((p,i) => ({ '@type': 'ScholarlyArticle', '@id': `${SITE_URL}/publicacoes#pub-${i+1}`, headline: p.title, author: { '@id': physicianId }, isPartOf: { '@type': 'Periodical', name: p.journal }, inLanguage: i===1||i===2 ? 'en' : 'pt-BR' }))
+  ]
+};
+
+export default function RootLayout({ children }) {
+  return <html lang="pt-BR"><body><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />{children}</body></html>;
+}

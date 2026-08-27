@@ -1,0 +1,33 @@
+/* Photo integration + final visual refinements */
+.hero{padding-top:78px;padding-bottom:68px}
+.section{padding-top:92px;padding-bottom:92px}
+.hero-art{min-height:520px}
+.portrait-photo{height:520px;padding:0;display:block;background:#dfe9e5}
+.portrait-photo:after{z-index:2;pointer-events:none}
+.portrait-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 42%;display:block}
+.floating-card{z-index:4}
+
+.clinic-gallery-section{padding:92px 0;background:linear-gradient(180deg,#fffdf8,#f2f6f3)}
+.clinic-heading{margin-bottom:34px}
+.clinic-photo-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px}
+.clinic-photo{margin:0;position:relative;min-height:430px;overflow:hidden;border-radius:26px;border:1px solid var(--line);box-shadow:var(--shadow);background:#e9eeeb}
+.clinic-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.clinic-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(13,37,33,.72))}
+.clinic-photo figcaption{position:absolute;left:26px;right:26px;bottom:22px;z-index:2;color:white;display:flex;flex-direction:column}
+.clinic-photo figcaption strong{font-family:Georgia,serif;font-size:24px;font-weight:400}
+.clinic-photo figcaption span{font-size:12px;opacity:.8;margin-top:3px}
+
+.secondary{background:rgba(255,255,255,.72)}
+.secondary:hover{background:#fff;box-shadow:0 10px 28px rgba(23,51,47,.09)}
+.location-section .outline-light{background:rgba(255,255,255,.04)}
+
+@media(max-width:950px){
+  .hero-art{min-height:440px}.portrait-photo{height:440px}
+  .clinic-photo-grid{grid-template-columns:1fr 1fr}.clinic-photo{min-height:360px}
+}
+@media(max-width:640px){
+  .hero{padding-top:54px;padding-bottom:54px}.section{padding-top:72px;padding-bottom:72px}
+  .hero-art{min-height:390px}.portrait-photo{height:390px}
+  .clinic-gallery-section{padding:72px 0}.clinic-photo-grid{grid-template-columns:1fr}.clinic-photo{min-height:330px}
+  .clinic-photo figcaption{left:20px;right:20px;bottom:18px}
+}

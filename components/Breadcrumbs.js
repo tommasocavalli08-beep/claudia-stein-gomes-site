@@ -1,0 +1,1 @@
+import Link from 'next/link';export default function Breadcrumbs({items}){return <nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/">Início</Link>{items.map(item=><span key={item.label}><span aria-hidden="true">/</span>{item.href?<Link href={item.href}>{item.label}</Link>:<span aria-current="page">{item.label}</span>}</span>)}</nav>}

@@ -1,71 +1,13 @@
 import Link from 'next/link';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { ArrowIcon, PinIcon, CalendarIcon } from '@/components/Icons';
-import { clinicPhotos, doctor, treatments } from '@/lib/site';
+import Header from '@/components/Header';import Footer from '@/components/Footer';import VideoEmbed from '@/components/VideoEmbed';
+import {doctor,treatments} from '@/lib/site';import {posts} from '@/lib/blog';
 
-const stats = [
-  ['+20 anos', 'de atuação em flebologia'],
-  ['Desde 2002', 'referência no cuidado do linfedema'],
-  ['Mestrado + Doutorado', 'formação acadêmica pela FEPAR']
-];
-
-export default function Home() {
-  return <>
-    <Header />
-    <main>
-      <section className="hero">
-        <div className="hero-orb orb-one" />
-        <div className="hero-orb orb-two" />
-        <div className="shell hero-grid">
-          <div className="hero-copy">
-            <span className="eyebrow">Cirurgia Vascular · Curitiba</span>
-            <h1>Precisão, tecnologia e cuidado para a <em>saúde das suas pernas.</em></h1>
-            <p className="lead">Tratamento de varizes, vasinhos e linfedema com abordagem individualizada, técnicas modernas e mais de duas décadas de experiência clínica.</p>
-            <div className="hero-actions">
-              <a className="btn primary" href={doctor.whatsappUrl} target="_blank" rel="noreferrer">Agendar avaliação <ArrowIcon /></a>
-              <Link className="btn secondary" href="/#tratamentos">Conhecer tratamentos</Link>
-            </div>
-            <div className="credentials">
-              <span>{doctor.crm}</span><span>{doctor.rqe}</span><span>Gênese Clínica · Mercês</span>
-            </div>
-          </div>
-          <div className="hero-art">
-            <figure className="portrait-placeholder portrait-photo">
-              <img src={doctor.photo} alt="Dra. Claudia Stein Gomes, cirurgiã vascular em Curitiba" fetchPriority="high" />
-            </figure>
-            <div className="floating-card"><strong>Flebologia & Linfologia</strong><span>Experiência clínica desde 2000</span></div>
-          </div>
-        </div>
-      </section>
-
-      <section className="stats-strip"><div className="shell stats-grid">{stats.map(([a,b]) => <div key={a}><strong>{a}</strong><span>{b}</span></div>)}</div></section>
-
-      <section className="section" id="tratamentos">
-        <div className="shell">
-          <div className="section-heading"><div><span className="eyebrow">Tratamentos</span><h2>Cuidado vascular com indicação precisa.</h2></div><p>Da avaliação à escolha da técnica, cada plano é definido conforme o quadro clínico e os exames necessários.</p></div>
-          <div className="treatment-grid">{treatments.map((t,i) => <Link key={t.slug} href={`/tratamentos/${t.slug}`} className="treatment-card"><span className="card-index">0{i+1}</span><span className="kicker">{t.kicker}</span><h3>{t.title}</h3><p>{t.summary}</p><span className="card-link">Saiba mais <ArrowIcon /></span></Link>)}</div>
-        </div>
-      </section>
-
-      <section className="feature-section"><div className="shell feature-grid"><div className="feature-visual"><div className="laser-diagram"><span className="laser-core"/><span className="laser-ring r1"/><span className="laser-ring r2"/><span className="laser-ring r3"/></div><div className="tech-tag">Procedimento guiado por ultrassom</div></div><div className="feature-copy"><span className="eyebrow">Destaque</span><h2>Endolaser: tratamento moderno e minimamente invasivo para varizes.</h2><p>Uma fibra óptica fina é introduzida no interior da veia por pequena punção. A energia térmica promove o fechamento controlado do vaso tratado, redirecionando o fluxo para veias saudáveis.</p><ul className="check-list"><li>Sem incisões cirúrgicas amplas</li><li>Alta no mesmo dia em casos indicados</li><li>Menor incidência de hematomas em relação à cirurgia convencional</li><li>Retorno gradativo às atividades em curto período</li></ul><Link className="text-link" href="/tratamentos/endolaser">Entenda o Endolaser <ArrowIcon /></Link></div></div></section>
-
-      <section className="section muted"><div className="shell about-teaser"><div><span className="eyebrow">Dra. Claudia Stein Gomes</span><h2>Formação que une cirurgia vascular, microcirurgia e linfologia.</h2><p>Formada em Cirurgia Vascular pela Santa Casa de Curitiba, realizou aperfeiçoamento em Microcirurgia e Linfologia na Universidade de Estudos de Gênova, na Itália. É mestre e doutora pela Faculdade Evangélica do Paraná e membro da Academia Paranaense de Medicina e da Sociedade Brasileira de Angiologia e de Cirurgia Vascular.</p><Link href="/sobre" className="btn secondary dark">Conhecer trajetória</Link></div><div className="timeline"><div><span>2000</span><strong>Cirurgia Vascular</strong><small>Santa Casa de Curitiba</small></div><div><span>2001–2002</span><strong>Microcirurgia & Linfologia</strong><small>Universidade de Estudos de Gênova · Itália</small></div><div><span>FEPAR</span><strong>Mestrado & Doutorado</strong><small>Formação acadêmica avançada</small></div></div></div></section>
-
-      <section className="clinic-gallery-section">
-        <div className="shell">
-          <div className="section-heading clinic-heading"><div><span className="eyebrow">Gênese Clínica</span><h2>O espaço onde a Dra. Claudia atende em Curitiba.</h2></div><p>Rua Visconde de Nacar, 656, no bairro Mercês. Fotos reais da clínica.</p></div>
-          <div className="clinic-photo-grid">
-            <figure className="clinic-photo clinic-photo-main"><img src={clinicPhotos.exterior} alt="Fachada da Gênese Clínica em Curitiba" loading="lazy" /><figcaption><strong>Gênese Clínica</strong><span>Fachada · Mercês, Curitiba</span></figcaption></figure>
-            <figure className="clinic-photo"><img src={clinicPhotos.reception} alt="Recepção da Gênese Clínica em Curitiba" loading="lazy" /><figcaption><strong>Recepção</strong><span>Ambiente interno da clínica</span></figcaption></figure>
-          </div>
-        </div>
-      </section>
-
-      <section className="section"><div className="shell"><div className="section-heading"><div><span className="eyebrow">Principais condições</span><h2>Diagnóstico e tratamento vascular.</h2></div></div><div className="condition-row">{['Varizes','Vasinhos','Trombose','Linfedema'].map(x => <div key={x}><span className="dot"/><strong>{x}</strong></div>)}</div></div></section>
-
-      <section className="location-section"><div className="shell location-grid"><div><span className="eyebrow light">Gênese Clínica</span><h2>Atendimento em Curitiba, no bairro Mercês.</h2><div className="location-info"><div><PinIcon/><span><strong>{doctor.address}</strong><a href={doctor.maps} target="_blank" rel="noreferrer">Ver no Google Maps</a></span></div><div><CalendarIcon/><span><strong>Atendimentos às terças e quintas</strong><span>Agendamentos por WhatsApp ou Doctoralia</span></span></div></div></div><div className="location-actions"><a className="btn light-btn" href={doctor.whatsappUrl} target="_blank" rel="noreferrer">Agendar pelo WhatsApp</a><a className="btn outline-light" href={doctor.doctoralia} target="_blank" rel="noreferrer">Agendar pela Doctoralia</a></div></div></section>
-    </main>
-    <Footer />
-  </>;
-}
+export default function Home(){const post=posts[0];return <><Header/><main>
+<section className="hero-new"><div className="shell hero-new-grid"><div className="hero-new-copy"><span className="eyebrow">Cirurgia Vascular · Curitiba</span><h1>Cuidado vascular com ciência, precisão e um olhar <em>individual.</em></h1><p className="lead">Varizes, vasinhos e linfedema tratados com experiência clínica, tecnologia e indicação responsável.</p><div className="hero-actions"><a className="btn primary" href={doctor.whatsappUrl} target="_blank" rel="noreferrer">Agendar avaliação</a><Link className="btn secondary" href="/#tratamentos">Ver tratamentos</Link></div><div className="hero-tags"><span>{doctor.crm}</span><span>{doctor.rqe}</span><Link href="/teleconsulta">Teleconsulta disponível</Link></div></div><div className="hero-portrait-wrap"><div className="hero-portrait-bg"/><img className="hero-portrait" src={doctor.photo} alt="Dra. Claudia Stein Gomes, cirurgiã vascular em Curitiba" fetchPriority="high"/><div className="hero-quote"><span>Flebologia & Linfologia</span><strong>Mais de duas décadas de atuação vascular.</strong></div></div></div></section>
+<section className="editorial-strip"><div className="shell"><p>Formação em Cirurgia Vascular pela Santa Casa de Curitiba, aperfeiçoamento em Microcirurgia e Linfologia em Gênova, Itália, mestrado e doutorado pela FEPAR.</p><Link href="/sobre">Conheça a trajetória →</Link></div></section>
+<section className="section" id="tratamentos"><div className="shell"><div className="section-heading"><div><span className="eyebrow">Tratamentos</span><h2>O melhor método é o que faz sentido para o seu caso.</h2></div><p>Diagnóstico, ultrassom quando indicado e um plano pensado para cada paciente — sem promessas genéricas.</p></div><div className="treatment-editorial-grid">{treatments.map((t,i)=><Link href={`/tratamentos/${t.slug}`} className={`treatment-editorial ${i===0?'wide':''}`} key={t.slug}><div className="treatment-media"><img src={t.image} alt="" loading="lazy"/></div><div className="treatment-body"><span>{String(i+1).padStart(2,'0')} · {t.kicker}</span><h3>{t.title}</h3><p>{t.summary}</p><b>Saiba mais →</b></div></Link>)}</div></div></section>
+<section className="video-story"><div className="shell video-story-grid"><div><span className="eyebrow light">A médica explica</span><h2>Linfedema: informação clara antes de qualquer decisão.</h2><p>Conteúdo em vídeo para entender o quadro, as possibilidades de tratamento e por que o acompanhamento especializado importa.</p><Link className="btn light-btn" href="/tratamentos/linfedema">Entender o linfedema</Link></div><VideoEmbed id="JL9LD-6bRY4" title="Dra. Claudia Stein Gomes explica linfedema"/></div></section>
+<section className="section about-new"><div className="shell about-new-grid"><div><span className="eyebrow">Dra. Claudia Stein Gomes</span><h2>Experiência clínica e formação em linfologia que atravessam décadas.</h2></div><div><p>Atuação em flebologia desde 2000 e dedicação ao cuidado do linfedema desde 2002, com abordagem que integra avaliação vascular, fisioterapia especializada e cirurgia linfática em casos selecionados.</p><div className="proof-grid"><div><strong>2000</strong><span>Início da atuação em flebologia</span></div><div><strong>Gênova</strong><span>Microcirurgia e Linfologia</span></div><div><strong>FEPAR</strong><span>Mestrado e Doutorado</span></div></div><Link className="text-link" href="/sobre">Ver formação completa →</Link></div></div></section>
+<section className="section blog-preview"><div className="shell"><div className="section-heading"><div><span className="eyebrow">Blog</span><h2>Informação que ajuda você a cuidar melhor da circulação.</h2></div><Link className="text-link" href="/blog">Ver todos os artigos →</Link></div><Link href={`/blog/${post.slug}`} className="featured-post"><div><span className="post-meta">{post.category} · {post.readTime}</span><h3>{post.title}</h3><p>{post.excerpt}</p><b>Ler artigo →</b></div><div className="post-visual"><span>GUIA</span><strong>Compressão<br/>sem confusão.</strong></div></Link></div></section>
+<section className="location-section"><div className="shell location-grid"><div><span className="eyebrow light">Gênese Clínica · Mercês</span><h2>Atendimento presencial em Curitiba e opção de teleconsulta.</h2><p>{doctor.address}</p></div><div className="location-actions"><a className="btn light-btn" href={doctor.whatsappUrl} target="_blank" rel="noreferrer">Agendar pelo WhatsApp</a><Link className="btn outline-light" href="/teleconsulta">Conhecer a teleconsulta</Link><a className="text-light" href={doctor.maps} target="_blank" rel="noreferrer">Ver no Google Maps ↗</a></div></div></section>
+</main><Footer/></>}

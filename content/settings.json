@@ -1,0 +1,10 @@
+{
+  "treatmentVideos": {
+    "endolaser": {"youtubeId":"","vertical":true},
+    "cirurgia-varizes-local-sedacao": {"youtubeId":"9tJyZKN7p9k","vertical":true},
+    "escleroterapia": {"youtubeId":"","vertical":true},
+    "laser-transdermico": {"youtubeId":"","vertical":true},
+    "linfedema": {"youtubeId":"JL9LD-6bRY4","vertical":false},
+    "pressoterapia": {"youtubeId":"","vertical":true}
+  }
+}

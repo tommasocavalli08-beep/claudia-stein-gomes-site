@@ -1,0 +1,24 @@
+[
+  {
+    "slug": "meias-elasticas-caras-ou-baratas",
+    "title": "Meias elásticas: qual a diferença entre as mais caras e as mais baratas?",
+    "excerpt": "Preço sozinho não define qualidade. Entenda o que realmente muda em compressão, materiais, durabilidade, conforto e tamanho.",
+    "date": "2026-09-10",
+    "readTime": "6 min",
+    "category": "Saúde vascular",
+    "coverImage": "",
+    "youtubeId": "",
+    "sections": [
+      {"id":"pressao","title":"1. Graduação e precisão da pressão","body":["Meias de compressão de melhor qualidade tendem a seguir padrões técnicos mais consistentes, com compressão graduada — maior no tornozelo e progressivamente menor em direção à coxa — e melhor manutenção da pressão indicada em mmHg.","Em produtos muito simples, a pressão pode variar mais, perder tensão com o uso ou não se distribuir de forma adequada. O preço, porém, não deve ser usado isoladamente como selo de qualidade: indicação, classe de compressão e ajuste correto são fundamentais."]},
+      {"id":"fios","title":"2. Tecnologia do fio e durabilidade","body":["Modelos de melhor construção costumam empregar elastano, microfibras e tramas desenvolvidas para suportar uso e lavagens mantendo elasticidade e compressão por mais tempo.","Quando o material perde elasticidade, a meia pode afrouxar, escorregar ou concentrar pressão em áreas inadequadas."]},
+      {"id":"conforto","title":"3. Conforto térmico e respirabilidade","body":["Tecidos mais respiráveis, toque mais suave e acabamentos de melhor qualidade podem favorecer o uso diário, especialmente em dias quentes.","Conforto importa porque uma meia tecnicamente correta só funciona quando é usada da forma e pelo tempo orientados."]},
+      {"id":"tamanho","title":"4. Confiabilidade do tamanho","body":["Marcas com tabelas detalhadas costumam considerar medidas do tornozelo, panturrilha e, conforme o modelo, coxa e comprimento da perna. Isso melhora o ajuste anatômico.","Tamanhos muito genéricos podem dificultar o encaixe correto. Uma meia apertada ou folgada demais pode não entregar a compressão esperada."]},
+      {"id":"escolha","title":"Então, qual escolher?","body":["A melhor meia não é necessariamente a mais cara. O ponto central é usar um produto com compressão adequada, tamanho correto, boa procedência e indicação individualizada.","Em casos de doença venosa, edema ou linfedema, a escolha da compressão deve ser orientada por profissional habilitado após avaliação clínica."]}
+    ],
+    "faqs": [
+      {"q":"Meia mais cara é sempre melhor?","a":"Não. Preço pode refletir materiais e construção, mas não substitui indicação correta, classe de compressão adequada e tamanho bem medido."},
+      {"q":"Posso escolher a compressão sozinha?","a":"Em presença de sintomas ou doença vascular, o ideal é definir a compressão após avaliação profissional, porque a indicação varia conforme o quadro clínico."},
+      {"q":"Quando devo trocar a meia?","a":"A durabilidade varia conforme material, frequência de uso e cuidados. Perda de elasticidade, deslizamento e alteração perceptível da compressão são sinais para reavaliar o produto."}
+    ]
+  }
+]

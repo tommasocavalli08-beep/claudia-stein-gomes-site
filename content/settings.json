@@ -1,10 +1,10 @@
 {
   "treatmentVideos": {
-    "endolaser": {"youtubeId":"","vertical":true},
-    "cirurgia-varizes-local-sedacao": {"youtubeId":"9tJyZKN7p9k","vertical":true},
-    "escleroterapia": {"youtubeId":"","vertical":true},
-    "laser-transdermico": {"youtubeId":"","vertical":true},
-    "linfedema": {"youtubeId":"JL9LD-6bRY4","vertical":false},
-    "pressoterapia": {"youtubeId":"","vertical":true}
+    "endolaser": {"videos":[{"youtubeId":"","vertical":true,"label":"Endolaser"}]},
+    "cirurgia-varizes-local-sedacao": {"videos":[{"youtubeId":"9tJyZKN7p9k","vertical":true,"label":"Cirurgia de varizes com local e sedação"}]},
+    "escleroterapia": {"videos":[{"youtubeId":"","vertical":true,"label":"Escleroterapia com glicose"},{"youtubeId":"","vertical":true,"label":"Escleroterapia com espuma"}]},
+    "laser-transdermico": {"videos":[{"youtubeId":"","vertical":true,"label":"Laser transdérmico"}]},
+    "linfedema": {"videos":[{"youtubeId":"JL9LD-6bRY4","vertical":false,"label":"Linfedema"}]},
+    "pressoterapia": {"videos":[{"youtubeId":"","vertical":true,"label":"Pressoterapia"}]}
   }
 }

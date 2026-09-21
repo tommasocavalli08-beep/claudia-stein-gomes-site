@@ -17,7 +17,7 @@ export default function Page(){
     title="Tratamento do Linfedema"
     kicker="Linfologia"
     intro="Uma abordagem integrada que combina diagnóstico vascular, Terapia Física Complexa (TFC) — também chamada Terapia Física Descongestiva Complexa — e, em situações selecionadas, procedimentos cirúrgicos linfáticos."
-    image="/media/linfedema.svg"
+    image="/media/linfedema.webp"
     faq={faq}
   >
     <h2>O que é linfedema?</h2>

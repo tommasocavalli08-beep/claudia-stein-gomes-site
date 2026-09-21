@@ -1,0 +1,14 @@
+<svg width="800" height="560" viewBox="0 0 800 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="560" rx="40" fill="#F4EFE8"/>
+  <path d="M398 74C353 112 334 161 338 217C342 274 332 334 304 400C286 442 304 490 347 505C389 520 433 499 446 457C463 404 471 344 468 279C465 221 481 170 507 134C526 108 520 75 496 58C470 40 429 47 398 74Z" fill="#E8D8D5"/>
+  <path d="M420 92C391 134 382 177 384 224C387 284 377 343 353 402" stroke="#7F4D67" stroke-width="16" stroke-linecap="round"/>
+  <path d="M405 164C381 163 361 150 349 130M391 233C364 230 344 215 334 194M385 306C355 302 334 287 323 263M371 378C344 374 323 359 313 337" stroke="#B27A91" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="420" cy="92" r="12" fill="#7F4D67"/>
+  <circle cx="384" cy="224" r="11" fill="#7F4D67"/>
+  <circle cx="376" cy="332" r="11" fill="#7F4D67"/>
+  <circle cx="353" cy="402" r="11" fill="#7F4D67"/>
+  <path d="M532 170C565 181 590 205 605 239C620 274 620 318 606 354" stroke="#C6A1AF" stroke-width="10" stroke-linecap="round" stroke-dasharray="8 18"/>
+  <path d="M603 347L588 329M603 347L625 338" stroke="#C6A1AF" stroke-width="10" stroke-linecap="round"/>
+  <text x="540" y="420" fill="#563442" font-family="Arial, sans-serif" font-size="28" font-weight="700">Linfedema</text>
+  <text x="540" y="453" fill="#7A6870" font-family="Arial, sans-serif" font-size="18">cuidado linfático</text>
+</svg>

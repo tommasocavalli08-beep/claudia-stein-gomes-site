@@ -7,8 +7,4 @@
   <circle cx="384" cy="224" r="11" fill="#7F4D67"/>
   <circle cx="376" cy="332" r="11" fill="#7F4D67"/>
   <circle cx="353" cy="402" r="11" fill="#7F4D67"/>
-  <path d="M532 170C565 181 590 205 605 239C620 274 620 318 606 354" stroke="#C6A1AF" stroke-width="10" stroke-linecap="round" stroke-dasharray="8 18"/>
-  <path d="M603 347L588 329M603 347L625 338" stroke="#C6A1AF" stroke-width="10" stroke-linecap="round"/>
-  <text x="540" y="420" fill="#563442" font-family="Arial, sans-serif" font-size="28" font-weight="700">Linfedema</text>
-  <text x="540" y="453" fill="#7A6870" font-family="Arial, sans-serif" font-size="18">cuidado linfático</text>
 </svg>

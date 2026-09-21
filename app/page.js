@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Header from '@/components/Header';import Footer from '@/components/Footer';import VideoEmbed from '@/components/VideoEmbed';
-import {doctor,treatments} from '@/lib/site';import {getPosts} from '@/lib/blog';
+import {doctor,treatments,clinicPhotos} from '@/lib/site';import {getPosts} from '@/lib/blog';
 export const dynamic='force-dynamic';
 export default async function Home(){const posts=await getPosts(),post=posts[0];return <><Header/><main>
 <section className="hero-new"><div className="shell hero-new-grid"><div className="hero-new-copy"><span className="eyebrow">Cirurgia Vascular · Curitiba</span><h1>Cuidado vascular com ciência, precisão e um olhar <em>individual.</em></h1><p className="lead">Varizes, vasinhos e linfedema tratados com experiência clínica, tecnologia e indicação responsável.</p><div className="hero-actions"><a className="btn primary" href={doctor.whatsappUrl} target="_blank" rel="noreferrer">Agendar avaliação</a><Link className="btn secondary" href="/#tratamentos">Ver tratamentos</Link></div><div className="hero-tags"><span>{doctor.crm}</span><span>{doctor.rqe}</span><Link href="/teleconsulta">Teleconsulta disponível</Link></div></div><div className="hero-portrait-wrap"><div className="hero-portrait-bg"/><img className="hero-portrait" src={doctor.photo} alt="Dra. Claudia Stein Gomes, cirurgiã vascular em Curitiba" fetchPriority="high"/><div className="hero-quote"><span>Flebologia & Linfologia</span><strong>Mais de duas décadas de atuação vascular.</strong></div></div></div></section>

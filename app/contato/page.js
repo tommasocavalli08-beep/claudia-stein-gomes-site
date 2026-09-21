@@ -11,7 +11,28 @@ export default function Contato(){
     <section className="content-section"><div className="shell contact-grid">
       <div className="contact-card"><span className="eyebrow">WhatsApp</span><h2>{doctor.whatsapp}</h2><p>Canal direto para solicitar agendamento e informações administrativas.</p><a className="btn primary" href={doctor.whatsappUrl} target="_blank" rel="noreferrer">Abrir WhatsApp</a></div>
       <div className="contact-card"><span className="eyebrow">Doctoralia</span><h2>Agendamento online</h2><p>Consulte o perfil profissional e a disponibilidade de agenda.</p><a className="btn secondary dark" href={doctor.doctoralia} target="_blank" rel="noreferrer">Ver Doctoralia</a></div>
-      <div className="contact-card full"><span className="eyebrow">Gênese Clínica</span><h2>Rua Visconde de Nacar, 656 — Mercês</h2><p>Curitiba — Paraná · CEP 80410-200</p><p>Telefones: <a href="tel:+554132249470">{doctor.phone}</a> · <a href="tel:+554132342172">{doctor.phone2}</a><br/>WhatsApp: <a href={doctor.whatsappUrl} target="_blank" rel="noreferrer">{doctor.whatsapp}</a><br/>E-mail: <a href={`mailto:${doctor.email}`}>{doctor.email}</a></p><div style={{display:'flex',gap:'12px',flexWrap:'wrap',margin:'22px 0 20px'}}><a href={doctor.maps} target="_blank" rel="noreferrer" style={{flex:'1 1 260px',overflow:'hidden',borderRadius:'18px',border:'1px solid rgba(39,26,32,.13)'}}><img src={clinicPhotos.exterior} alt="Área externa da Gênese Clínica em Curitiba" style={{width:'100%',height:'220px',objectFit:'cover'}}/></a><a href={doctor.maps} target="_blank" rel="noreferrer" style={{flex:'1 1 260px',overflow:'hidden',borderRadius:'18px',border:'1px solid rgba(39,26,32,.13)'}}><img src={clinicPhotos.reception} alt="Ambiente da Gênese Clínica em Curitiba" style={{width:'100%',height:'220px',objectFit:'cover'}}/></a></div><a className="btn secondary dark" href={doctor.maps} target="_blank" rel="noreferrer">Ver Gênese Clínica no Google Maps</a></div>
+      <div className="contact-card full">
+        <span className="eyebrow">Gênese Clínica</span>
+        <h2>Rua Visconde de Nacar, 656 — Mercês</h2>
+        <p>Curitiba — Paraná · CEP 80410-200</p>
+        <p>
+          Telefones: <a href="tel:+554132249470">{doctor.phone}</a> · <a href="tel:+554132342272">{doctor.phone2}</a><br/>
+          WhatsApp: <a href={doctor.whatsappUrl} target="_blank" rel="noreferrer">{doctor.whatsapp}</a><br/>
+          E-mail: <a href={`mailto:${doctor.email}`}>{doctor.email}</a>
+        </p>
+        <div style={{display:'flex',gap:'12px',flexWrap:'wrap',margin:'22px 0 20px'}}>
+          <a href={doctor.maps} target="_blank" rel="noreferrer" style={{flex:'1 1 260px',overflow:'hidden',borderRadius:'18px',border:'1px solid rgba(39,26,32,.13)'}}>
+            <img src={clinicPhotos.exterior} alt="Área externa da Gênese Clínica em Curitiba" style={{width:'100%',height:'220px',objectFit:'cover'}}/>
+          </a>
+          <a href={doctor.maps} target="_blank" rel="noreferrer" style={{flex:'1 1 260px',overflow:'hidden',borderRadius:'18px',border:'1px solid rgba(39,26,32,.13)'}}>
+            <img src={clinicPhotos.reception} alt="Recepção da Gênese Clínica em Curitiba" style={{width:'100%',height:'220px',objectFit:'cover'}}/>
+          </a>
+          <a href={doctor.maps} target="_blank" rel="noreferrer" style={{flex:'1 1 260px',overflow:'hidden',borderRadius:'18px',border:'1px solid rgba(39,26,32,.13)'}}>
+            <img src={clinicPhotos.receptionNew} alt="Sala de espera da Gênese Clínica em Curitiba" style={{width:'100%',height:'220px',objectFit:'cover'}}/>
+          </a>
+        </div>
+        <a className="btn secondary dark" href={doctor.maps} target="_blank" rel="noreferrer">Ver Gênese Clínica no Google Maps</a>
+      </div>
     </div></section>
   </main><Footer/></>
 }

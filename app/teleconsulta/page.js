@@ -15,7 +15,7 @@ export default function Page(){
         <div>
           <span className="eyebrow">Teleconsulta</span>
           <h1>Orientação vascular também à distância, quando o caso permite.</h1>
-          <p>A teleconsulta pode ser útil para a conversa inicial, revisão de exames, acompanhamento e até para organizar o agendamento de uma cirurgia de varizes à distância. Alguns diagnósticos e decisões, porém, exigem exame físico e devem ser realizados em consulta presencial.</p>
+          <p>A teleconsulta pode ser útil para conversa inicial, revisão de exames, acompanhamento e até para marcar uma cirurgia de varizes à distância. Alguns diagnósticos e decisões, porém, exigem exame físico e devem ser realizados presencialmente.</p>
           <a className="btn primary" href={doctor.whatsappUrl} target="_blank" rel="noreferrer">Solicitar teleconsulta</a>
         </div>
         <div className="tele-visual"><span>ONLINE</span><strong>Consulta médica<br/>com contexto.</strong><p>CRM-PR 16064 · RQE 9991</p></div>
@@ -29,13 +29,13 @@ export default function Page(){
             <li>Conversa inicial e organização das principais queixas.</li>
             <li>Revisão de exames e acompanhamento da evolução de sintomas já conhecidos.</li>
             <li>Orientações de seguimento e organização dos próximos passos.</li>
-            <li>Em situações apropriadas, organização do agendamento de cirurgia de varizes à distância.</li>
+            <li>Em situações apropriadas, até para marcar uma cirurgia de varizes à distância.</li>
           </ul>
           <h2>Quando o presencial é necessário?</h2>
-          <p>Quando o diagnóstico ou a decisão médica depende de exame físico, ou quando há necessidade de procedimento presencial, a consulta presencial é indicada. Durante a teleconsulta, a médica pode orientar essa transição.</p>
+          <p>Alguns diagnósticos e decisões exigem exame físico e devem ser realizados presencialmente. Quando houver necessidade de procedimento presencial, a médica pode orientar essa transição durante a teleconsulta.</p>
           <div className="medical-note">
             <strong>Segurança primeiro</strong>
-            <p>Teleconsulta não substitui atendimento de urgência. Sintomas agudos e importantes devem ser avaliados em pronto-socorro apropriado.</p>
+            <p>Teleconsulta não substitui atendimento de urgência. Em caso de sintomas agudos e importantes, procure um Pronto Socorro.</p>
           </div>
         </article>
         <aside className="aside-card">
